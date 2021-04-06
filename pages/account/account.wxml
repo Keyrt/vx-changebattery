@@ -1,0 +1,30 @@
+<!--pages/account/account.wxml-->
+<view class="container">
+	<view class="userInfo">
+		<view class="avatar">
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+		<view class="right">
+			<view class="nickName">
+				<open-data type="userNickName"></open-data>
+			</view>
+			<view class="phone">{{phone}}</view>
+		</view>
+	</view>
+	<view class="menu">
+		<view class="menuItem" bindtap="jumpToOrderList">
+			<view class="lable">
+				<image src="../../images/order.png"></image>
+				<label>我的订单</label>
+			</view>
+			<icon class="iconfont icon-arrow"></icon>
+		</view>
+		<view class="menuItem" bindtap="jumpToAboutUs">
+			<view class="lable">
+				<image src="../../images/about.png"></image>
+				<label>关于我们</label>
+			</view>
+			<icon class="iconfont icon-arrow"></icon>
+		</view>
+	</view>
+</view>

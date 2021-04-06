@@ -1,0 +1,62 @@
+<!--pages/order/orderList.wxml-->
+<view class="container" wx:if="{{ !isEmpty && !nonetwork}}">
+	<view class="orderList">
+		<view class="orderItem" wx:for="{{orderList}}" wx:for-item="item" wx:key="id" data-item="{{item}}" bindtap="jumpToDetil">
+			<view class="order-li title">
+				<view class="lable">
+					<label>IMEI码：</label>
+				</view>
+				<view class="info">{{item.imei}}</view>
+			</view>
+			<view class="order-li">
+				<view class="lable">
+					<label>保证金：</label>
+				</view>
+				<view class="info">￥{{item.cashPledge}}</view>
+			</view>
+			<!-- <view class="order-li">
+				<view class="lable">
+					<label>订单租金：</label>
+				</view>
+				<view class="info">￥{{item.leasePrice}}</view>
+			</view> -->
+			<view class="order-li">
+				<view class="lable">
+					<label>订单租期：</label>
+				</view>
+				<view class="info">{{item.time}}天</view>
+			</view>
+			<view class="order-li">
+				<view class="lable">
+					<label>截止时间：</label>
+				</view>
+				<view class="info">{{item.endTime}}</view>
+			</view>
+			<!-- <view class="order-li">
+				<view class="lable">
+					<label>订单状态：</label>
+				</view>
+				<view class="info {{item.stuats==1?'red':(item.stuats==4?'grey':'')}}">{{item.stuats==0?'使用中':(item.stuats==1?'已逾期':(item.stuats==2?'待确认':(item.stuats==3?'已结算':'已取消')))}}</view>
+			</view> -->
+			<!-- paid 支付状态 0:支付成功 1:待支付  2:支付失败 -->
+			<view wx:if="{{item.paid!='0'}}" class="order-stuats {{item.paid=='2'?'grey':''}}">{{item.paid=='0'?'支付成功':(item.paid=='1'?'待支付':'支付失败')}}</view>
+			<!-- orderStatus 订单状态 0:使用中  1:已逾期 2:已结算 -->
+			<view wx:if="{{item.paid=='0'}}" class="order-stuats {{item.orderStatus=='1'?'red':''}}">{{item.orderStatus=='0'?'使用中':(item.orderStatus=='1'?'已逾期':'已结算')}}</view>
+			<!-- status '保证金状态 0：已交 1：退回中  2：已退回' -->
+			<!-- <view class="order-count">实付金额：￥{{item.money}}</view> -->
+		</view>
+	</view>
+</view>
+
+<view class="empty" wx:if="{{ isEmpty && !nonetwork}}">
+	<view class="empty-container">
+		<view><image src="../../images/empty.png"></image></view>
+		<view class="text">当前内容为空</view>
+	</view>
+</view>
+<view class="empty" wx:if="{{ nonetwork }}">
+	<view class="empty-container">
+		<view><image src="../../images/nowifi.png"></image></view>
+		<view class="text blue" bindtap="refresh">刷新</view>
+	</view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/login/landing.wxml-->
+<view class="container">
+	<view class="companyInfo">
+		<view class="image">
+			<image src="../../images/logo.png"></image>
+		</view>
+		<view class="title">置富租电</view>
+		<view class="introduction">
+			<!-- <view>
+				置富新能源（威海）有限公司是一家专注于物联网科技及新兴能源技术研发，生产制造，销售，推广及运营于一体的高新科技企业。
+			</view> -->
+			<view>置富租电，基于智能物联网技术，依托完善的互联网服务，打造新型锂电池共享租赁平台，致力于为两轮电动车用户提供高效、安全、可靠的优质服务</view>
+		</view>
+		<!-- <view class="info">这里是置富租电的介绍这里是置富租电的介绍这里是置富租电的介绍这里是置富租电的介绍这里是置富租电的介绍</view> -->
+	</view>
+
+	<view class="btn"><button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"
+			class="weui-btn weui-btn_primary">微信用户快捷登录</button>
+		<view class="protocol">登录表示您同意 <label>《置富租电用户服务协议》</label></view>
+
+	</view>
+</view>

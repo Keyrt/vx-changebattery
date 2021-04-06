@@ -1,0 +1,129 @@
+/* pages/lease/lease.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  background-color: #FBFBFB;
+}
+
+.lists {
+  padding: 0 30rpx 80rpx;
+}
+
+.lists .item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+  margin: 20rpx 0 40rpx;
+  box-shadow: 0rpx 0rpx 6rpx #e3e3e3;
+  padding: 20rpx;
+  color: #333;
+}
+
+.lists .item .title {
+  font-weight: 400;
+  font-size: 32rpx;
+  color: #333;
+  letter-spacing: 0px;
+  padding-bottom: 10rpx;
+  line-height: 48rpx;
+}
+
+.lists .item .title image {
+  display: inline-block;
+  width: 48rpx;
+  height: 48rpx;
+  vertical-align: bottom;
+}
+
+.lists .item .title h3 {
+  flex-shrink: 100;
+  margin-left: 10rpx;
+}
+
+.lists .item .itemInfo {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10rpx 60rpx;
+  font-size: 28rpx;
+  line-height: 46rpx;
+}
+
+.lists .item .itemInfo .itemli {
+  overflow: hidden;
+}
+
+.lists .item .itemInfo .itemli .left {
+  float: left;
+}
+
+.lists .item .itemInfo .itemli .right {
+  float: right;
+}
+
+.lists .item .itemul {
+  padding: 10rpx 0 0;
+  overflow: hidden;
+}
+
+.lists .item .itemul .itemul-title {
+  padding: 0 60rpx;
+}
+
+.lists .item .itemul .setMeal {
+  width: 100%;
+  padding: 14rpx 0;
+}
+
+.lists .item .itemul .setMeal-grid {
+  width: 28%;
+  overflow: hidden;
+  float: left;
+  text-align: center;
+  border: 1rpx solid #eee;
+  border-radius: 20rpx;
+  margin: 8rpx 2%;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  font-size: 28rpx;
+}
+.lists .item .itemul .setMeal-grid.activity{
+  background-color: #ffdf07;
+}
+
+.lists .item .item-deposit {
+  padding: 20rpx 60rpx;
+}
+
+.lists .item .item-deposit .right {
+  float: right;
+}
+
+.gopay {
+  position: fixed;
+  bottom: 0;
+  background-color: #fdfcfc;
+  width: 100%;
+  height: 94rpx;
+  line-height: 94rpx;
+  border-top: 1px solid #e3e3e3;
+}
+
+.gopay .count {
+  width: 70%;
+  float: left;
+  text-align: right;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+
+.gopay .submit {
+  width: 30%;
+  background-color: #ffdf07;
+  float: right;
+  text-align: center;
+}

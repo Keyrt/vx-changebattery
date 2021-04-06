@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+	<map id="batteryMap" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" markers="{{markers}}"
+		bindmarkertap="markertap" bindregionchange="bindregionchange" show-location>
+	</map>
+	<!-- <view class="safeBottom"></view> -->
+	<view class="button location" bindtap="locationTap">
+		<image src="/images/location.png"></image>
+	</view>
+	<view class="button use" bindtap="useTap">
+		<image src="/images/use.png"></image>
+	</view>
+	<view class="button customer" bindtap="customerTap">
+		<image src="/images/customer.png"></image>
+	</view>
+	<view class="button Input" bindtap="inputTap">
+		<image src="/images/Input.png"></image>
+	</view>
+
+	<!-- 遮罩层 -->
+	<view class="shadow" wx:if="{{chooseSize}}" bindtap='hideModal'></view>
+	<!-- 上滑高度 -->
+	<view class='choosen' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+		<!-- 内容 -->
+		<view class="container-box">
+			<view class="logo" bindtap="toNavigation">
+				<image src="/images/station/logo.png"></image>
+			</view>
+			<view class="title-box">
+				<image src="{{station.dept.logo}}"></image>
+				<view class="title">
+					<text class="two">{{station.dept.deptName}}</text>
+					<view class="btn">{{station.is_work=="0"?"营业中":"未开业"}}</view>
+				</view>
+			</view>
+			<view class="item">
+				<image src="/images/station/line.png"></image>
+				<text>{{station.distance}}km</text>
+			</view>
+			<view class="item">
+				<image src="/images/station/battery.png"></image>
+				<text>可租电池：{{station.subscribe_num}}个</text>
+			</view>
+			<view class="item">
+				<image src="/images/station/time.png"></image>
+				<text>{{station.dept.startDate}} ~ {{station.dept.endDate}}</text>
+			</view>
+			<view class="item">
+				<image src="/images/station/stationL.png"></image>
+				<!-- <text
+					class="two">在设置文件里面设置导航小程序的appid，因为我使用的是uniapp这个框，所以我是在manifest.json这个文件里面修改的，如果是原生小程序的话，就需要在app.json文件里面修改就可以了</text> -->
+				<text class="two">{{station.dept.address}}</text>
+			</view>
+		</view>
+	</view>
+
+</view>

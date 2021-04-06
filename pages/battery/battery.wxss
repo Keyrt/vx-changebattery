@@ -1,0 +1,179 @@
+/* pages/battery/battery.wxss */
+/* .page {
+  height: 100%;
+} */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  background-color: #FBFBFB;
+  color: #333;
+}
+
+.pick {
+  width: 100%;
+  position: relative;
+}
+
+.picker {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.pick .renewList {
+  position: absolute;
+  right: 28rpx;
+  top: 16rpx;
+  font-size: 28rpx;
+  color: rgb(13, 128, 202);
+}
+
+
+.pick .picker .lable {
+  line-height: 76rpx;
+}
+
+.pick .picker .iconfont {
+  vertical-align: top;
+  font-size: 18rpx;
+  margin-left: 10rpx;
+}
+
+.topItem {
+  position: relative;
+  /* background-color: #ffcc00; */
+  width: 530rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 24rpx;
+}
+
+.topItem-container {
+  overflow: hidden;
+}
+
+.topItem-li {
+  width: 49.5%;
+  text-align: center;
+  float: left;
+  font-size: 28rpx;
+}
+
+.topItem-li .top {
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.topItem-li .top label {
+  font-size: 28rpx;
+}
+
+.interval {
+  width: 0.2%;
+  height: 60rpx;
+  background-color: rgb(197, 196, 196);
+  float: left;
+  margin-top: 30rpx;
+}
+
+.topItem .stuats {
+  position: absolute;
+  top: -10rpx;
+  right: -40rpx;
+  background-color: #ffe88a;
+  border-radius: 30rpx;
+  padding: 6rpx 20rpx;
+  font-size: 28rpx;
+}
+
+.topItem .stuats.red {
+  background-color: red;
+  color: #fff;
+}
+
+.powerList {
+  border-radius: 16rpx;
+  margin: 40rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 0rpx 6rpx #e3e3e3;
+  padding: 20rpx;
+}
+
+.powerList .powerItem:last-child {
+  border-bottom: none;
+}
+
+.powerItem {
+  width: 100%;
+  border-bottom: 1rpx solid #e3e3e3;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.powerItem .lable {
+  float: left;
+  margin-left: 10rpx;
+  color: #7a7a7a;
+}
+
+.powerItem .info {
+  float: right;
+  margin-right: 10rpx;
+}
+
+.powerItem .lable image {
+  display: inline-block;
+  width: 48rpx;
+  height: 48rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+
+.renew {
+  position: fixed;
+  bottom: 130rpx;
+  right: 10%;
+  /* right: 20rpx;
+  bottom: 20rpx; */
+  margin: 0 auto;
+  margin-bottom: env(safe-area-inset-bottom);
+  width: 80%;
+  height: 100rpx;
+  border-radius: 100rpx;
+  background-color: #ffcc00;
+  text-align: center;
+  line-height: 100rpx;
+  box-shadow: 2rpx 2rpx 6rpx #d4d4d4;
+}
+
+.red {
+  color: red;
+}
+
+.empty {
+  width: 100%;
+  height: 100%;
+}
+
+.empty-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.empty-container .text {
+  text-align: center;
+  margin: 30rpx 0;
+}
+
+.empty-container .text.blue {
+  color: blue;
+}

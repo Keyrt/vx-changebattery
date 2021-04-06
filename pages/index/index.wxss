@@ -1,0 +1,204 @@
+.container {
+  height: 100vh;
+  width: 100%;
+}
+
+#batteryMap {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 96rpx+env(safe-area-inset-bottom);
+}
+
+.customCallout {
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  width: 150px;
+  height: 40px;
+  display: inline-flex;
+  padding: 5px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.content {
+  flex: 0 1 auto;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+/* .safeBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 96rpx;
+  background: white;
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+  z-index: -1;
+} */
+
+.button {
+  position: fixed
+}
+
+.button image {
+  width: 100%;
+  height: 100%;
+}
+
+.button.location {
+  width: 40px;
+  height: 40px;
+  left: 60rpx;
+  bottom: 140rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.button.use {
+  width: 166rpx;
+  height: 166rpx;
+  left: 50%;
+  bottom: 120rpx;
+  transform: translate(-50%, 0);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.button.customer {
+  width: 40px;
+  height: 40px;
+  right: 60rpx;
+  bottom: 140rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.button.Input {
+  width: 40px;
+  height: 40px;
+  right: 60rpx;
+  bottom: 260rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 遮罩 */
+.shadow {
+  width: 100%;
+  height: 100%;
+  z-index: 80;
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+/* 上滑高度 */
+.choosen {
+  width: 100%;
+  height: 760rpx;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  /* border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx; */
+  z-index: 98;
+}
+
+/* 内容 */
+.container-box {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  /* border-radius: 15rpx; */
+  margin: 0 auto;
+  z-index: 98;
+}
+
+.logo {
+  position: absolute;
+  top: -80rpx;
+  width: 160rpx;
+  height: 160rpx;
+  right: 20rpx;
+}
+
+.logo image {
+  width: 100%;
+  height: 100%;
+}
+
+.title-box {
+  margin-top: 80rpx;
+  margin-left: 20rpx;
+  padding: 0 20rpx 26rpx;
+}
+
+.title-box image {
+  float: left;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+.title-box .title {
+  position: relative;
+  width: 72%;
+  height: 160rpx;
+  float: left;
+  margin-left: 20rpx;
+  line-height: 44rpx;
+  font-size: 32rpx;
+  color: rgb(119, 119, 119);
+  overflow: hidden;
+}
+
+.two {
+  display: -webkit-box  !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.title-box .btn {
+  position: absolute;
+  display: table-cell;
+  background-color: rgb(255, 191, 0);
+  border-radius: 42rpx;
+  padding: 4rpx 30rpx;
+  font-size: 24rpx;
+  color: #333;
+  bottom: 0;
+}
+
+.container-box .item {
+  padding: 16rpx;
+}
+
+.container-box .item image {
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.container-box .item text {
+  display: inline-block;
+  width: 90%;
+  font-size: 28rpx;
+  color: rgb(119, 119, 119);
+  /* margin-left: 20rpx; */
+}
+
+
+/* 遮罩结束 */

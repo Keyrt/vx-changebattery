@@ -1,0 +1,60 @@
+<!--pages/lease/lease.wxml-->
+<view class="container">
+	<view class="lists">
+		<view class="item">
+			<view class="title icon-box">
+				<image src="../../images/rent.png"></image>
+				<h3>电池及租赁点</h3>
+			</view>
+			<view class="itemInfo">
+				<view class="itemli">
+					<view class="left">IMEI码</view>
+					<view class="right">{{param.imei}}</view>
+				</view>
+				<view class="itemli">
+					<view class="left">电池型号</view>
+					<view class="right">{{param.typeName}}</view>
+				</view>
+				<view class="itemli">
+					<view class="left">租赁点</view>
+					<view class="right">{{param.deptName}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="item">
+			<view class="title">
+				<image src="../../images/order.png"></image>
+				<h3>租赁信息</h3>
+			</view>
+			<view class="itemul">
+				<view class="itemul-title">租期及租金</view>
+				<view class="setMeal">
+					<a class="setMeal-grid {{index+1==current?'activity':''}}" wx:for="{{operate}}" wx:for-item="item" wx:key="index" bindtap="changetype" data-item="{{index}}">
+						<!-- <view bindtap="changetype" data-item="{{item}}"> -->
+						<view class="label">{{item.month}}个月</view>
+						<view class="label">￥{{item.money}}</view>
+						<!-- </view> -->
+					</a>
+				</view>
+			</view>
+			<view class="item-deposit" wx:if="{{ param.cashPledge!= 0}}">
+				<label class="left">保证金</label>
+				<label class="right">￥{{param.cashPledge}}</label>
+			</view>
+		</view>
+		<view class="weui-form__tips-area">
+			<label class="weui-agree" bindtap='checkboxChange'>
+				<!-- <checkbox-group bindchange="checkboxChange"> -->
+					<checkbox class="weui-agree__checkbox-check" checked="{{checked}}"/>
+				<!-- </checkbox-group> -->
+				<!-- <button bindtap='checkboxChange' class="agreeBtn"></button> -->
+				<span class="weui-agree__checkbox"></span>
+				<span class="weui-agree__text">我已阅读并同意 <a>《置富电池租赁协议》</a></span>
+			</label>
+		</view>
+	</view>
+	<view class="gopay">
+		<view class="count">实付金额：￥{{pay}}</view>
+		<view class="submit" bindtap="submitOrder">提交订单</view>
+	</view>
+</view>

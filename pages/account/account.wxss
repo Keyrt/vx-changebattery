@@ -1,0 +1,77 @@
+/* pages/account/account.wxss */
+.container {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  background-color: #FBFBFB;
+  color: #333;
+}
+
+.userInfo {
+  width: 100%;
+  padding: 60rpx 40rpx 40rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+  overflow: hidden;
+  float: left;
+  vertical-align: middle;
+}
+
+.userInfo .right {
+  float: left;
+  margin-left: 40rpx;
+  line-height: 75rpx;
+  font-size: 32rpx;
+  color: grey;
+}
+
+.userInfo .right .nickName {
+  font-weight: bold;
+  color: #333;
+}
+
+.menu {
+  margin: 20rpx 40rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+  box-shadow: 0rpx 0rpx 6rpx #e3e3e3;
+}
+
+.menuItem {
+  width: 100%;
+  border-bottom: 1rpx solid #e3e3e3;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.menu .menuItem:last-child {
+  border-bottom: none;
+}
+
+.menuItem .lable {
+  float: left;
+  margin-left: 10rpx;
+}
+
+.menuItem .lable image {
+  display: inline-block;
+  width: 42rpx;
+  height: 42rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+.icon-arrow {
+  float: right;
+  margin-right: 10rpx;
+}

@@ -1,0 +1,126 @@
+<!--pages/order/orderDetil.wxml-->
+<view class="container">
+	<view class="box">
+		<view class="title">
+			<image src="../../images/timer.png"></image>
+			<h3>{{endtime}} 到期</h3>
+			<!-- paid 支付状态 0:支付成功 1:待支付  2:支付失败 -->
+			<view wx:if="{{item.paid!='0'}}" class="stuats {{item.paid=='2'?'grey':''}}">
+				{{item.paid=='0'?'支付成功':(item.paid=='1'?'待支付':'支付失败')}}</view>
+			<!-- orderStatus 订单状态 0:使用中  1:已逾期 2:已结算 -->
+			<view wx:if="{{item.paid=='0'}}" class="stuats {{item.orderStatus=='1'?'red':''}}">
+				{{item.orderStatus=='0'?'使用中':(item.orderStatus=='1'?'已逾期':'已结算')}}</view>
+			<!-- status '保证金状态 0：已交 1：退回中  2：已退回' -->
+			<!-- <view class="stuats">已提交微信受理中</view> -->
+		</view>
+	</view>
+	<view class="box">
+		<view class="title">
+			<image src="../../images/rent.png"></image>
+			<h3>租赁信息</h3>
+		</view>
+		<!-- <view class="info">
+			<view class="lable">
+				<label>租期及租金：</label>
+			</view>
+			<view class="infos">{{item.time/30}}个月/￥{{item.leasePrice}}</view>
+		</view> -->
+		<view class="info">
+			<view class="lable">
+				<label>保证金：</label>
+			</view>
+			<view class="infos">￥{{item.cashPledge}}</view>
+		</view>
+		<!-- <view class="info">
+			<view class="lable">
+				<label>订单租金：</label>
+			</view>
+			<view class="infos">￥{{item.leasePrice}}</view>
+		</view> -->
+		<view class="info">
+			<view class="lable">
+				<label>订单租期：</label>
+			</view>
+			<view class="infos">{{item.time/30}}个月</view>
+		</view>
+		<!-- <view class="info">
+			<view class="lable">
+				<label>实付金额：</label>
+			</view>
+			<view class="infos">￥2999.00</view>
+		</view> -->
+		<view class="info">
+			<view class="lable">
+				<label>IMEI码：</label>
+			</view>
+			<view class="infos">{{item.imei}}</view>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>电池型号：</label>
+			</view>
+			<view class="infos">{{item.typeName}}</view>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>租赁点：</label>
+			</view>
+			<view class="infos">{{item.deptName}}</view>
+		</view>
+		<view class="info" wx:if="{{ item.endDate != null}}">
+			<view class="lable">
+				<label>最新续费时间：</label>
+			</view>
+			<view class="infos">{{item.endDate}}</view>
+		</view>
+	</view>
+	<view class="box">
+		<view class="title">
+			<image src="../../images/order.png"></image>
+			<h3>订单信息</h3>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>实付金额：</label>
+			</view>
+			<view class="infos">￥{{item.totalPrice}}</view>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>保证金：</label>
+			</view>
+			<view class="infos">￥{{item.cashPledge}}</view>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>租期及租金：</label>
+			</view>
+			<view class="infos">{{item.time/30}}个月/￥{{item.leasePrice}}</view>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>订单编号：</label>
+			</view>
+			<view class="infos">{{item.orderNo}}</view>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>下单时间：</label>
+			</view>
+			<view class="infos">{{item.createTime}}</view>
+		</view>
+		<view class="info">
+			<view class="lable">
+				<label>支付时间：</label>
+			</view>
+			<view class="infos">{{item.payTime}}</view>
+		</view>
+	</view>
+	<view class="box renew">
+		<view class="title" bindtap="jumpToRenewList">
+			<image src="../../images/renew.png"></image>
+			<h3>续费记录</h3>
+			<icon class="iconfont icon-arrow"></icon>
+		</view>
+	</view>
+</view>

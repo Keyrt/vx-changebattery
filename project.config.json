@@ -1,0 +1,130 @@
+{
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "1.5.4",
+  "appid": "wx9dace1cde5e51207",
+  "projectname": "ofo%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "pages/iemi/iemi",
+          "pathName": "pages/iemi/iemi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "pages/lease/lease",
+          "pathName": "pages/lease/lease",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/lease/lease",
+          "pathName": "pages/lease/lease",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/battery/battery",
+          "pathName": "pages/battery/battery",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/account/account",
+          "pathName": "pages/account/account",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/order/orderList",
+          "pathName": "pages/order/orderList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/order/orderDetil",
+          "pathName": "pages/order/orderDetil",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "pages/aboutUs/aboutUs",
+          "pathName": "pages/login/landing",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/order/renewList",
+          "pathName": "pages/order/renewList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/login/landing",
+          "pathName": "pages/login/landing",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<!--pages/battery/battery.wxml-->
+<view class="container" wx:if="{{ !isEmpty && !nonetwork}}">
+	<view class="pick">
+		<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+			<view class="picker">
+				<label class="lable">
+					{{array[index].name}}</label>
+				<icon class="iconfont icon-xiala"></icon>
+			</view>
+		</picker>
+		<view class="renewList" bindtap="jumpToRenewList">续费记录</view>
+	</view>
+	<view class="topItem">
+		<view class="topItem-container">
+			<view class="topItem-li">
+				<view class="top">{{array[index].power}}<label>%</label></view>
+				<view>剩余电量</view>
+			</view>
+			<view class="interval"></view>
+			<view class="topItem-li">
+				<view class="top">{{array[index].time}}<label>天</label></view>
+				<view>剩余租期</view>
+			</view>
+		</view>
+		<view class="stuats {{array[index].status=='0'?'':'red'}}">{{array[index].status=='0'?'使用中':'已逾期'}}</view>
+	</view>
+	<view class="powerList">
+		<view class="powerItem">
+			<view class="lable">
+				<image src="../../images/battery/stuats.png"></image>
+				<label>电池状态</label>
+			</view>
+			<view class="info {{array[index].batteryStatus=='0'?'':'red'}}">{{array[index].batteryStatus=='0'?'闲置':(array[index].batteryStatus=='1'?'放电':(array[index].batteryStatus=='2'?'充电':(array[index].batteryStatus=='3'?'故障':(array[index].batteryStatus=='4'?'维修':'报废'))))}}</view>
+		</view>
+		<view class="powerItem">
+			<view class="lable">
+				<image src="../../images/battery/online.png"></image>
+				<label>在线状态</label>
+			</view>
+			<view class="info {{array[index].onlineStuats=='0'?'':'red'}}">{{array[index].onlineStuats=='0'?'在线':'离线'}}</view>
+		</view>
+		<view class="powerItem">
+			<view class="lable">
+				<image src="../../images/battery/type.png"></image>
+				<label>电池型号</label>
+			</view>
+			<view class="info">{{array[index].batteryType}}</view>
+		</view>
+		<view class="powerItem">
+			<view class="lable">
+				<image src="../../images/battery/voltage.png"></image>
+				<label>电压</label>
+			</view>
+			<view class="info">{{array[index].voltage}}V</view>
+		</view>
+		<view class="powerItem">
+			<view class="lable">
+				<image src="../../images/battery/current.png"></image>
+				<label>电流</label>
+			</view>
+			<view class="info">{{array[index].current}}A</view>
+		</view>
+		<!-- <view class="powerItem">
+			<view class="lable">
+				<image src="../../images/battery/temperature.png"></image>
+				<label>温度</label>
+			</view>
+			<view class="info">{{array[index].temperature}}℃</view>
+		</view> -->
+		<view class="powerItem">
+			<view class="lable">
+				<image src="../../images/battery/standard.png"></image>
+				<label>规格</label>
+			</view>
+			<view class="info">{{array[index].standard}} mm</view>
+		</view>
+
+	</view>
+	<view class="renew" bindtap="jumpToRenew">
+		续费
+	</view>
+</view>
+<view class="empty" wx:if="{{ isEmpty && !nonetwork}}">
+	<view class="empty-container">
+		<view><image src="../../images/empty.png"></image></view>
+		<view class="text">当前内容为空</view>
+	</view>
+</view>
+<view class="empty" wx:if="{{ nonetwork }}">
+	<view class="empty-container">
+		<view><image src="../../images/nowifi.png"></image></view>
+		<view class="text blue" bindtap="refresh">刷新</view>
+	</view>
+</view>

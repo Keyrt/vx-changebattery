@@ -1,0 +1,59 @@
+<!--pages/order/renewList.wxml-->
+<view class="container" wx:if="{{ !isEmpty && !nonetwork}}">
+	<view class="list">
+
+		<view class="item" wx:for="{{renewList}}" wx:for-item="item" wx:key="id" data-item="{{item}}">
+			<view class="info">
+				<view class="lable">
+					<label>续费单号：</label>
+				</view>
+				<view class="infos">{{item.orderNo}}</view>
+			</view>
+			<view class="info">
+				<view class="lable">
+					<label>租期及租金：</label>
+				</view>
+				<view class="infos">{{item.time/30}}个月/￥{{item.leasePrice}}</view>
+			</view>
+			<view class="info">
+				<view class="lable">
+					<label>下单时间：</label>
+				</view>
+				<view class="infos">{{item.createTime}}</view>
+			</view>
+			<view class="info" wx:if="{{item.payTime !=''}}">
+				<view class="lable">
+					<label>支付时间：</label>
+				</view>
+				<view class="infos">{{item.payTime}}</view>
+			</view>
+			<!-- <view class="info" wx:if="{{item.payTime !=''}}">
+				<view class="lable">
+					<label>实付金额：</label>
+				</view>
+				<view class="infos">{{item.payTime}}</view>
+			</view> -->
+			<view class="order-stuats {{item.paid=='2'?'grey':''}}">{{item.paid=='0'?'支付成功':(item.paid=='1'?'待支付':'支付失败')}}</view>
+			<view class="order-count">实付金额：￥{{item.totalPrice}}</view>
+		</view>
+
+	</view>
+</view>
+
+
+<view class="empty" wx:if="{{ isEmpty && !nonetwork}}">
+	<view class="empty-container">
+		<view>
+			<image src="../../images/empty.png"></image>
+		</view>
+		<view class="text">当前内容为空</view>
+	</view>
+</view>
+<view class="empty" wx:if="{{ nonetwork }}">
+	<view class="empty-container">
+		<view>
+			<image src="../../images/nowifi.png"></image>
+		</view>
+		<view class="text blue" bindtap="refresh">刷新</view>
+	</view>
+</view>

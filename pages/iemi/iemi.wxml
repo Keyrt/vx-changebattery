@@ -1,0 +1,9 @@
+<!--输入iemi码-->
+<view class="container">
+	<view class="input">
+		<input class="weui-input iemiInput" bindinput="bindKeyInput" placeholder="请输入IMEI码" type="text"></input>
+	</view>
+	<view class="btn">
+		<a class="weui-btn iemibtn" bindtap="jumpTolease">确 定</a>
+	</view>
+</view>

@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wallet/wallet",
+    "pages/logs/logs",
+    "pages/account/account",
+    "pages/battery/battery",
+    "pages/iemi/iemi",
+    "pages/lease/lease",
+    "pages/authorize/authorize",
+    "pages/order/orderList",
+    "pages/login/landing",
+    "pages/order/orderDetil",
+    "pages/aboutUs/aboutUs",
+    "pages/order/renewList",
+    "custom-tab-bar/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbf9fe",
+    "navigationBarTitleText": "置富租电",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#8a8a8a",
+    "selectedColor": "#ffcc00",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home_nor.png",
+        "selectedIconPath": "images/home_sel.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/battery/battery",
+        "iconPath": "images/battery_nor.png",
+        "selectedIconPath": "images/battery_sel.png",
+        "text": "电池"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "images/account_nor.png",
+        "selectedIconPath": "images/account_sel.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

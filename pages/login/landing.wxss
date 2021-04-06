@@ -1,0 +1,83 @@
+/* pages/login/landing.wxss */
+.container {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  background-color: #FBFBFB;
+  color: #333;
+  position: relative;
+}
+
+.companyInfo {
+  width: 100%;
+}
+
+.companyInfo .image {
+  display: flex;
+  justify-content: center;
+  margin-top: 120rpx;
+}
+
+.companyInfo .image image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.companyInfo .title {
+  font-weight: 400;
+  font-size: 46rpx;
+  color: rgb(16, 16, 16);
+  line-height: 120rpx;
+  text-align: center;
+}
+.introduction {
+  font-weight: 400;
+  font-size: 28rpx;
+  color: rgb(16, 16, 16);
+  line-height: 52rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  text-indent: 60rpx;
+  margin-top: 68rpx;
+}
+.companyInfo .info {
+  font-weight: 400;
+  font-size: 28rpx;
+  color: rgb(16, 16, 16);
+  line-height: 40rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  text-indent: 60rpx;
+}
+
+.btn {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 100rpx;
+  height: 80rpx;
+
+  /* position: absolute;
+  bottom: 320rpx; */
+}
+
+.btn button {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  padding:  0;
+}
+
+.protocol {
+  font-weight: 400;
+  font-size: 28rpx;
+  color: rgba(138, 138, 138, 1);
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.protocol label {
+  color: rgba(13, 128, 202, 1);
+}

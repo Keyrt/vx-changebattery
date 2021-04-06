@@ -1,0 +1,9 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view class="container">
+	<view class="title">置富租电</view>
+	<view class="version">V1.0.4</view>
+	<view class="introduction">
+		<view>置富新能源（威海）有限公司是一家专注于物联网科技及新兴能源技术研发，生产制造，销售，推广及运营于一体的高新科技企业。公司位于无废环保城市威海市南海新区高新产业园内，自成立以来，始终以为用户和客户提供高效优质的服务为己任，励志发展成为锂电池领域的全球领先高科技企业。</view>
+		<view>旗下“置富租电”品牌，基于智能物联网技术，依托完善的互联网服务，打造新型锂电池共享租赁平台，致力于为两轮电动车用户提供高效、安全、可靠的优质服务</view>
+	</view>
+</view>
